@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireLearn.Producer", "HangFireLearn.Producer.csproj", "{FF8D9869-DF73-4201-85AE-7EFF78C6C374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireLearn.Server", "..\HangFireLearn.Server\HangFireLearn.Server.csproj", "{0C2779A1-FF9B-4DD6-A1F8-FCF3407EB0CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF8D9869-DF73-4201-85AE-7EFF78C6C374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8D9869-DF73-4201-85AE-7EFF78C6C374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8D9869-DF73-4201-85AE-7EFF78C6C374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8D9869-DF73-4201-85AE-7EFF78C6C374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2779A1-FF9B-4DD6-A1F8-FCF3407EB0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2779A1-FF9B-4DD6-A1F8-FCF3407EB0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2779A1-FF9B-4DD6-A1F8-FCF3407EB0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2779A1-FF9B-4DD6-A1F8-FCF3407EB0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C11B80F-A334-4F29-A255-6C11477F92CA}
+	EndGlobalSection
+EndGlobal
