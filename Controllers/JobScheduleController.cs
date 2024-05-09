@@ -15,14 +15,13 @@ namespace HangFireLearn.Controllers
         public JobScheduleController(IBackgroundJobClient backgroundJobClient)
         {
             _backgroundJobClient = backgroundJobClient;
-
         }
 
         [HttpPost]
         [Route("fire-and-forget")]
         public Task<string> FireAndForget([FromBody] string text)
         {
-            _backgroundJobClient.Enqueue(() => Console.WriteLine(text));
+            _backgroundJobClient.Enqueue(() => MailSender.SendSingleMail());
             return Task.FromResult(text);
         }
 
