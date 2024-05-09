@@ -1,5 +1,8 @@
 using Hangfire;
+using Hangfire.Common;
+using HangFireLearn.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
 
 namespace HangFireLearn.Controllers
 {
@@ -12,6 +15,7 @@ namespace HangFireLearn.Controllers
         public JobScheduleController(IBackgroundJobClient backgroundJobClient)
         {
             _backgroundJobClient = backgroundJobClient;
+
         }
 
         [HttpPost]
@@ -40,5 +44,15 @@ namespace HangFireLearn.Controllers
             _backgroundJobClient.ContinueJobWith(jobId, () => Console.WriteLine(text));
             return Task.FromResult(text);
         }
+
+        [HttpPost]
+        [Route("SendMail")]
+        public Task<string> SendMail([FromBody] string text)
+        {
+            var manager = new RecurringJobManager();
+            manager.AddOrUpdate(Guid.NewGuid().ToString(), Job.FromExpression(() => MailSender.SendSingleMail()), Cron.Minutely());
+            return Task.FromResult(text);
+        }
+
     }
 }
